@@ -4,11 +4,13 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import { AuthProvider } from "./contexts/FirebaseContext";
+import GlobalStyles from "./styles/GlobalStyles";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <AuthProvider>
+        <GlobalStyles />
         <App />
       </AuthProvider>
     </BrowserRouter>
