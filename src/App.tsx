@@ -1,11 +1,15 @@
-import React from "react";
+// routes
+import Router from "./routes";
+// theme
+// hooks
+import useAuth from "./hooks/useAuth";
+import LoadingScreen from "./components/LoadingScreen";
+// components
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header"></header>
-    </div>
-  );
+// ----------------------------------------------------------------------
+
+export default function App() {
+  const { isInitialized } = useAuth();
+
+  return isInitialized ? <Router /> : <LoadingScreen />;
 }
-
-export default App;
