@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { PATH_MAIN } from "../../routes/paths";
@@ -21,10 +20,10 @@ const ButtonText = styled.span`
   overflow: visible;
   font-weight: 800;
   font-family: "Inter", sans-serif;
-  color: #3b3b3b;
+  color: #3d3d3d;
   font-size: 20px;
   letter-spacing: -0.4px;
-  padding-left: 15px;
+  padding-left: 25px;
   line-height: 1.2;
 `;
 

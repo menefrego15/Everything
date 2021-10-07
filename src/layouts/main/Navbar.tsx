@@ -10,9 +10,9 @@ const Header = styled.header`
 `;
 
 const HeaderText = styled.h1`
-  color: #2b2b2b;
   font-family: "Inter", sans-serif;
   font-weight: 900;
+  color: #3b3b3b;
   letter-spacing: -0.4px;
   line-height: 1.2;
 `;
@@ -22,7 +22,7 @@ export default function Navbar() {
   return (
     <Header>
       <Container>
-        <HeaderText>Hello {user?.displayName} 👋</HeaderText>
+        <HeaderText>Hello {user?.displayName.split(" ")[0]} 👋</HeaderText>
       </Container>
     </Header>
   );
