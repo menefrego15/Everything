@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import faker from "faker";
 
 const Card = styled.div`
   width: 220px;
@@ -37,7 +36,7 @@ const TopCard = styled.div`
   flex-direction: row;
 `;
 
-const MiddleCard = styled.div`
+const BottomCard = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -71,7 +70,7 @@ const Avatar = styled.img`
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  margin-right: 3px;
+  margin-right: -10px;
   border: 1px solid white;
 `;
 
@@ -94,6 +93,17 @@ type Props = {
   color: string;
 };
 
+const Champs =
+  "Aatrox,Ahri,Akali,Alistar,Amumu,Anivia,Annie,Aphelios,Ashe,Azir,Bard,Blitzcrank,Brand,Braum,Caitlyn,Camille,Cassiopeia,Chogath,Corki,Darius,Diana,Draven,Ekko,Elise,Evelynn,Ezreal,Fiddlesticks,Fiora,Fizz,Galio,Gangplank,Garen,Gnar,Gragas,Graves,Hecarim,Heimerdinger,Illaoi,Irelia,Ivern,Janna,Jax,Jayce,Jhin,Jinx,Kalista,Karma,Karthus,Kassadin,Katarina,Kayle,Kayn,Kennen,Kindred,Kled,Lee Sin,Leona,Lillia,Lissandra,Lucian,Lulu,Lux,Malphite,Malzahar,Maokai,Miss Fortune,Mordekaiser,Morgana,Nami,Nasus,Nautilus,Neeko,Nidalee,Nocturne,Olaf,Orianna,Ornn,Pantheon,Poppy,Pyke,Qiyana,Quinn,Rakan,Rammus,Rell,Renekton,Rengar,Riven,Rumble,Ryze,Samira,Sejuani,Senna,Seraphine,Sett,Shaco,Shen,Shyvana,Singed,Sion,Sivir,Skarner,Sona,Soraka,Swain,Sylas,Syndra,Taliyah,Talon,Taric,Teemo,Thresh,Tristana,Trundle,Tryndamere,Twitch,Udyr,Urgot,Varus,Vayne,Veigar,Vi,Viktor,Vladimir,Volibear,Warwick,Wukong,Xayah,Xerath,Xin Zhao,Yasuo,Yone,Yorick,Yuumi,Zac,Zed,Ziggs,Zilean,Zoe,Zyra";
+const ChampsList = Champs.split(",");
+
+const RandomAvatar = () => {
+  const random = Math.floor(Math.random() * ChampsList.length);
+  const avatarWithoutSpaces = ChampsList[random].replaceAll(" ", "");
+  const Avatar = avatarWithoutSpaces.replaceAll("'", "");
+  return Avatar;
+};
+
 const Categories = ({ items, name, color }: Props) => {
   return (
     <Card color={color}>
@@ -108,16 +118,22 @@ const Categories = ({ items, name, color }: Props) => {
           <Dot />
         </DotDiv>
       </TopCard>
-      <MiddleCard>
+      <BottomCard>
         <AvatarDiv>
-          <Avatar src={faker.image.avatar()} />
-          <Avatar src={faker.image.avatar()} />
-          <Avatar src={faker.image.avatar()} />
+          <Avatar
+            src={`http://ddragon.leagueoflegends.com/cdn/11.20.1/img/champion/${RandomAvatar()}.png`}
+          />
+          <Avatar
+            src={`http://ddragon.leagueoflegends.com/cdn/11.20.1/img/champion/${RandomAvatar()}.png`}
+          />
+          <Avatar
+            src={`http://ddragon.leagueoflegends.com/cdn/11.20.1/img/champion/${RandomAvatar()}.png`}
+          />
         </AvatarDiv>
         <TasksDiv color={color}>
           <span>{items.length} Task</span>
         </TasksDiv>
-      </MiddleCard>
+      </BottomCard>
     </Card>
   );
 };
