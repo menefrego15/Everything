@@ -17,12 +17,27 @@ const HeaderText = styled.h1`
   line-height: 1.2;
 `;
 
+const Nav = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
+const MyAvatar = styled.img`
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+`;
+
 export default function Navbar() {
   const { user } = useAuth();
   return (
     <Header>
       <Container>
-        <HeaderText>Hello {user?.displayName.split(" ")[0]} 👋</HeaderText>
+        <Nav>
+          <HeaderText>Hello {user?.displayName.split(" ")[0]} 👋</HeaderText>
+          <MyAvatar src={user?.photoURL} />
+        </Nav>
       </Container>
     </Header>
   );

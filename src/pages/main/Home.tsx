@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { PATH_MAIN } from "../../routes/paths";
 import { Container, Grid } from "@material-ui/core";
+import Arrow from "../../assets/arrow.png";
 
 const Button = styled.div`
   width: 100%;
@@ -12,6 +13,17 @@ const Button = styled.div`
   border-radius: 14px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+`;
+
+const StyleDiv = styled.div`
+  width: 30%;
+  background-color: #2467f4;
+  border-radius: 14px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const ButtonText = styled.span`
@@ -50,6 +62,9 @@ const Home = () => {
                 <Link to={link.link}>
                   <Button>
                     <ButtonText>{link.name}</ButtonText>
+                    <StyleDiv>
+                      <img alt="arrow" src={Arrow} style={{ width: "40px" }} />
+                    </StyleDiv>
                   </Button>
                 </Link>
               </Grid>
