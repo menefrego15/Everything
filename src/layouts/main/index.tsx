@@ -14,7 +14,7 @@ const RootStyle = styled.div`
 
 const MainStyle = styled("div")(({ theme }) => ({
   flexGrow: 1,
-  overflow: "auto",
+  overflow: "none",
   minHeight: "100%",
 }));
 

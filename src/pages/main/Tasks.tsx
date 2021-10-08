@@ -1,4 +1,4 @@
-import { Grid, Container } from "@material-ui/core";
+import { Container } from "@material-ui/core";
 import styled from "styled-components";
 import Categories from "../../components/Categories";
 
@@ -26,31 +26,48 @@ const StyleContainer = styled.div`
 `;
 
 const content = [
-  { name: "Sports", items: ["Do squats", "Have sex", "Go to the gym"] },
-  { name: "Business", items: ["Buy NFT", "Sell 2 courses"] },
+  {
+    name: "Sports",
+    items: ["Do squats", "Have sex", "Go to the gym"],
+    emoji: "⚽️",
+  },
+  { name: "Business", items: ["Buy NFT", "Sell 2 courses"], emoji: "📊" },
   {
     name: "Personal",
     items: ["See family", "Eat 2 apple", "Talk to strangers"],
+    emoji: "👨‍👩‍👧",
   },
 ];
 
+const ScrollableDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  overflow: auto;
+  width: 100%;
+  padding: 15px 15px 15px 0;
+`;
+
 const Tasks = () => {
   return (
-    <Container>
+    <Container style={{ overflow: "none" }}>
       <StyleContainer>
         <Header>
           <HeaderText>Categories</HeaderText>
           <SubHeaderText>6 tasks left</SubHeaderText>
         </Header>
-        <Grid container spacing={2}>
+        <ScrollableDiv>
           {content.map((cat) => {
             return (
-              <Grid key={cat.name} item xs={6} sm={6} md={4}>
-                <Categories name={cat.name} items={cat.items} />
-              </Grid>
+              <div key={cat.name}>
+                <Categories
+                  name={cat.name}
+                  items={cat.items}
+                  emoji={cat.emoji}
+                />
+              </div>
             );
           })}
-        </Grid>
+        </ScrollableDiv>
       </StyleContainer>
     </Container>
   );
