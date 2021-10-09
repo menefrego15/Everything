@@ -1,22 +1,22 @@
 import styled from "styled-components";
-import planet from "../assets/planet1.png";
+import heart from "../assets/Heart.png";
 
 const GlobalDiv = styled.div`
   width: 100%;
   background-color: white;
-  height: 160px;
+  height: 130px;
   border-radius: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 `;
 
 const RightDiv = styled.div`
   width: 55%;
-  height: 170px;
-  background-color: #4861f6;
+  height: 140px;
+  background-color: #1f1f1f;
   border-radius: 20px;
   padding: 5px 10px 5px 10px;
 `;
@@ -29,10 +29,10 @@ const LeftDiv = styled.div`
 `;
 
 const Img = styled.img`
-  width: 100px;
+  width: 70px;
 `;
 
-const HeaderText = styled.h2`
+const HeaderText = styled.h3`
   font-family: "Inter", sans-serif;
   font-weight: 800;
   color: white;
@@ -41,13 +41,13 @@ const HeaderText = styled.h2`
 `;
 
 const Button = styled.div`
-  border-radius: 18px;
-  width: 120px;
+  border-radius: 13px;
+  width: 100px;
   display: flex;
-  height: 60px;
+  height: 40px;
   justify-content: center;
   align-items: center;
-  background: #66b9f8;
+  background: #2b2b2b;
   span {
     font-weight: 800;
     color: #ffffff;
@@ -75,7 +75,7 @@ function TaskSummary() {
         </Content>
       </RightDiv>
       <LeftDiv>
-        <Img alt="planet" src={planet} />
+        <Img alt="planet" src={heart} />
       </LeftDiv>
     </GlobalDiv>
   );

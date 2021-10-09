@@ -4,7 +4,7 @@ import Categories from "../../components/Categories";
 import TaskSummary from "../../components/TaskSummary";
 import SvgPlus from "../../assets/svgPlus";
 
-const HeaderText = styled.h1`
+const HeaderText = styled.h2`
   font-family: "Inter", sans-serif;
   font-weight: 900;
   color: #181818;
@@ -15,12 +15,11 @@ const HeaderText = styled.h1`
 const SubHeaderText = styled.h4`
   font-family: "Inter", sans-serif;
   font-weight: 700;
-  color: #65baf7;
+  color: #2222228a;
   letter-spacing: -0.4px;
 `;
 
 const Header = styled.div`
-  padding-bottom: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -40,13 +39,13 @@ const content = [
   {
     name: "Sports",
     items: ["Do squats", "Have sex", "Go to the gym"],
-    color: "#2467f4",
+    color: "#1f1f1f",
   },
-  { name: "Business", items: ["Buy NFT", "Sell 2 courses"], color: "#218BF8" },
+  { name: "Business", items: ["Buy NFT", "Sell 2 courses"], color: "#2e2e2e" },
   {
     name: "Personal",
     items: ["See family", "Eat 2 apple", "Talk to strangers"],
-    color: "#2467f4",
+    color: "#1f1f1f",
   },
 ];
 

@@ -12,14 +12,14 @@ import LoadingScreen from "../components/LoadingScreen";
 const Loadable = (Component: any) => (props: any) => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const { pathname } = useLocation();
-  const isDashboard = pathname.includes("/main");
+  const isMain = pathname.includes("/main");
 
   return (
     <Suspense
       fallback={
         <LoadingScreen
           sx={{
-            ...(!isDashboard && {
+            ...(!isMain && {
               top: 0,
               left: 0,
               width: 1,
