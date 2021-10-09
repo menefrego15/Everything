@@ -1,12 +1,13 @@
 import { Container } from "@material-ui/core";
 import styled from "styled-components";
 import Categories from "../../components/Categories";
+import TaskSummary from "../../components/TaskSummary";
 import SvgPlus from "../../assets/svgPlus";
 
-const HeaderText = styled.h2`
+const HeaderText = styled.h1`
   font-family: "Inter", sans-serif;
   font-weight: 900;
-  color: #4d3c3a;
+  color: #181818;
   letter-spacing: -0.4px;
   line-height: 1.2;
 `;
@@ -61,6 +62,7 @@ const Tasks = () => {
   return (
     <Container style={{ overflow: "none" }}>
       <StyleContainer>
+        <TaskSummary />
         <Header>
           <TextDiv>
             <HeaderText>Categories</HeaderText>

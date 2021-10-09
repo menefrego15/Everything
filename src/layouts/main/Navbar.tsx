@@ -12,7 +12,7 @@ const Header = styled.header`
 const HeaderText = styled.h1`
   font-family: "Inter", sans-serif;
   font-weight: 900;
-  color: #3b3b3b;
+  color: #181818;
   letter-spacing: -0.4px;
   line-height: 1.2;
 `;
