@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { LinearProgress, withStyles } from "@material-ui/core";
+import { LinearProgress } from "@material-ui/core";
 
 const Card = styled.div`
   width: 220px;
@@ -72,7 +72,7 @@ const Avatar = styled.img`
   height: 34px;
   border-radius: 50%;
   margin-right: -10px;
-  border: 1px solid white;
+  border: 1px solid #6be2c6;
 `;
 
 const TasksDiv = styled.div`
@@ -106,23 +106,6 @@ const RandomAvatar = () => {
 };
 
 const Categories = ({ items, name, color }: Props) => {
-  const barColor = color === "#1f1f1f" ? "#2b2b2b" : "#1f1f1f";
-
-  const BorderLinearProgress = withStyles((theme) => ({
-    root: {
-      height: 10,
-      borderRadius: 4,
-    },
-    colorPrimary: {
-      backgroundColor: "white",
-    },
-    bar: {
-      borderRadius: 2,
-      backgroundColor: barColor,
-    },
-  }))(LinearProgress);
-
-  const progress = 80;
   return (
     <Card color={color}>
       <TopCard>
@@ -152,7 +135,22 @@ const Categories = ({ items, name, color }: Props) => {
           <span>{items.length} Task</span>
         </TasksDiv>
       </BottomCard>
-      <BorderLinearProgress variant="determinate" value={progress} />
+      <LinearProgress
+        variant="determinate"
+        value={40}
+        sx={{
+          "& .MuiLinearProgress-bar": {
+            bgcolor: "#6be2c6",
+          },
+          "& .MuiLinearProgress-dashed": {
+            backgroundImage: "#6be2c6",
+          },
+          "&.MuiLinearProgress-indeterminate, &.MuiLinearProgress-determinate, & .MuiLinearProgress-bar2Buffer, &.MuiLinearProgress-query":
+            {
+              bgcolor: "white",
+            },
+        }}
+      />
     </Card>
   );
 };
