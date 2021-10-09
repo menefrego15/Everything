@@ -18,7 +18,7 @@ const GlobalStyles = createGlobalStyle`
       width: '100%';
       height: '100%';
       font-family: "Inter", sans-serif;
-      background: #F7FAFF;
+      background: #071037;
     }
     #root {
       width: '100%';

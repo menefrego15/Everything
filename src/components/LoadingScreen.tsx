@@ -21,8 +21,8 @@ const nprogressStyle = makeStyles((theme) => ({
         width: "100%",
         position: "fixed",
         zIndex: 100,
-        backgroundColor: "#2B2B2B",
-        boxShadow: `0 0 2px #2B2B2B`,
+        backgroundColor: "#6be2c6",
+        boxShadow: `0 0 2px #6be2c6`,
       },
       "& .peg": {
         right: 0,
@@ -32,7 +32,7 @@ const nprogressStyle = makeStyles((theme) => ({
         display: "block",
         position: "absolute",
         transform: "rotate(3deg) translate(0px, -4px)",
-        boxShadow: `0 0 10px #2B2B2B, 0 0 5px #2B2B2B`,
+        boxShadow: `0 0 10px #6be2c6, 0 0 5px #6be2c6`,
       },
     },
   },
@@ -43,7 +43,6 @@ const RootStyle = styled.div`
   display: "flex";
   align-items: "center";
   justify-content: "center";
-  background-color: white;
 `;
 
 // ----------------------------------------------------------------------
@@ -96,7 +95,7 @@ export default function LoadingScreen({ ...other }) {
             height: 100,
             borderRadius: "25%",
             position: "absolute",
-            border: `solid 8px #2b2b2bc5`,
+            border: `solid 8px #6be2c6`,
           }}
         />
 
@@ -118,7 +117,7 @@ export default function LoadingScreen({ ...other }) {
             height: 120,
             borderRadius: "25%",
             position: "absolute",
-            border: `solid 8px #2b2b2bc5`,
+            border: `solid 8px #6be2c6`,
           }}
         />
       </Container>

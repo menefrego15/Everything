@@ -9,24 +9,45 @@ const Header = styled.header`
   align-items: center;
 `;
 
-const HeaderText = styled.h1`
-  font-family: "Inter", sans-serif;
-  font-weight: 900;
-  color: #181818;
-  letter-spacing: -0.4px;
-  line-height: 1.2;
+const Hamburger = styled.div`
+  width: 35px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #6be2c665;
+  border-radius: 10px;
+  box-shadow: 0px 0px 13px 8px #6be2c613;
+
+  padding: 8px;
+`;
+const Hamb1 = styled.div`
+  width: 100%;
+  height: 7px;
+  background: #6be2c6;
+  border-radius: 7px;
+`;
+
+const Hamb2 = styled.div`
+  width: 90%;
+  height: 7px;
+  background: #6be2c6;
+  border-radius: 7px;
 `;
 
 const Nav = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
 `;
 
 const MyAvatar = styled.img`
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  border-radius: 15px;
+  border: 2px solid #6be2c6;
+  box-shadow: 0px 0px 13px 8px #6be2c621;
 `;
 
 export default function Navbar() {
@@ -35,7 +56,11 @@ export default function Navbar() {
     <Header>
       <Container>
         <Nav>
-          <HeaderText>Hello {user?.displayName.split(" ")[0]} 👋</HeaderText>
+          <Hamburger>
+            <Hamb1 />
+            <Hamb2 />
+            <Hamb1 />
+          </Hamburger>
           <MyAvatar src={user?.photoURL} />
         </Nav>
       </Container>

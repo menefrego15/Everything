@@ -6,8 +6,8 @@ import { Container, Grid } from "@material-ui/core";
 const Button = styled.div`
   width: 100%;
   height: 82px;
-  box-shadow: 0px 0px 13px 8px rgba(84, 84, 84, 0.09);
-  background-color: #ffffff;
+  box-shadow: 0px 0px 13px 8px rgba(203, 203, 203, 0.07);
+  background-color: #232d4f;
   overflow: visible;
   border-radius: 14px;
   display: flex;
@@ -21,7 +21,7 @@ const ButtonText = styled.span`
   overflow: visible;
   font-weight: 800;
   font-family: "Inter", sans-serif;
-  color: #3d3d3d;
+  color: #ffffff;
   font-size: 20px;
   letter-spacing: -0.4px;
   padding-left: 25px;
