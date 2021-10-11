@@ -110,7 +110,6 @@ function AuthProvider({ children }: { children: ReactNode }) {
             email: res.user?.email,
             photoURL: res.user?.photoURL,
             phoneNumber: res.user?.phoneNumber || null,
-            lolPseudo: null,
           });
       });
   };
@@ -129,8 +128,7 @@ function AuthProvider({ children }: { children: ReactNode }) {
     email: string,
     password: string,
     firstName: string,
-    lastName: string,
-    lolPseudo: string
+    lastName: string
   ) =>
     firebase
       .auth()
@@ -144,7 +142,6 @@ function AuthProvider({ children }: { children: ReactNode }) {
             uid: res.user?.uid,
             email,
             photoURL: null,
-            lolPseudo,
             phoneNumber: null,
             displayName: `${firstName} ${lastName}`,
           });

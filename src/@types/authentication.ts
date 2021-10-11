@@ -32,8 +32,7 @@ export type FirebaseContextType = {
     email: string,
     password: string,
     firstName: string,
-    lastName: string,
-    lolPseudo: string
+    lastName: string
   ) => Promise<void>;
   loginWithGoogle: () => Promise<void>;
   loginWithFaceBook: () => Promise<firebase.auth.UserCredential>;
